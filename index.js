@@ -1,7 +1,8 @@
 const express = require('express');
 const app = express();
 const compression = require('compression');
-
+require('dotenv').config()
+const PORT = process.env.PORT || 8080
 //app.use(compression())
 
 app.get("/compress", (req, res) => {
@@ -32617,4 +32618,4 @@ app.get("/compress", (req, res) => {
     res.send(products)
 })
 
-app.listen(8080, () => console.log("App listening on port 8080"))
+app.listen(PORT, () => console.log("App listening on port 8080"))
