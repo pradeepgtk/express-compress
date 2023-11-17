@@ -3,7 +3,7 @@ const app = express();
 const compression = require('compression');
 require('dotenv').config()
 const PORT = process.env.PORT || 8080
-//app.use(compression())
+app.use(compression())
 
 app.get("/compress", (req, res) => {
     const products = {
